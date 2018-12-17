@@ -14,6 +14,9 @@
     <div class="container perimetro-ativo">
         <h1>Cadastrar novo soldado</h1>
         <form th:method="POST"  th:action="@{/soldados/salvar}" th:object="${soldado}">
+        	<div class="alert alert-success" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+                <span th:text="${mensagem}"> </span>
+            </div>
             <input type="hidden" th:field="*{id}">
             <div class="form-group">
                 <input type="text" placeholder="Nome" class="form-control"  th:field=*{nome} required />

@@ -1,4 +1,4 @@
-package br.com.EB.Portaria.model;
+package br.com.eb.portaria.model;
 
 import org.springframework.security.core.GrantedAuthority;
 
@@ -9,7 +9,8 @@ import java.util.List;
 
 @Entity
 public class Role implements GrantedAuthority {
-    @Id
+	private static final long serialVersionUID = 1L;
+	@Id
     private String papel;
     @ManyToMany(mappedBy = "roles")
     private List<Soldado> soldados;
@@ -18,20 +19,16 @@ public class Role implements GrantedAuthority {
     public String getAuthority() {
         return this.papel;
     }
-
     public String getPapel() {
         return papel;
     }
-
-    public void setPapel(String papel) {
-        this.papel = papel;
+    public void setPapel(String papelUsuario) {
+        this.papel = papelUsuario;
     }
-
     public List<Soldado> getSoldados() {
         return soldados;
     }
-
-    public void setSoldados(List<Soldado> soldados) {
-        this.soldados = soldados;
+    public void setSoldados(List<Soldado> listaSoldados) {
+        this.soldados = listaSoldados;
     }
 }

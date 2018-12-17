@@ -1,8 +1,8 @@
-package br.com.EB.Portaria.repository;
+package br.com.eb.portaria.repository;
 
-import br.com.EB.Portaria.model.Soldado;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import br.com.eb.portaria.model.Soldado;
 
 @Repository
 public interface SoldadoRepository extends JpaRepository<Soldado, Long> {
