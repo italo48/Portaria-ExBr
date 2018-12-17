@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+    <head th:fragment ="head">
+        <link th:href="@{/css/bootstrap.min.css}"  rel="stylesheet"/>
+        <link th:href="@{/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    </head>
+    <body>
+
+    <div th:fragment="header">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" th:href="@{/}">Portaria EB</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/registros/listar}">Lista de Registros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/soldados/listar}">Lista de Soldados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/soldados/cadastrar}">Cadastrar novo soldado</a>
+                        </li>
+                        <li class="nav-item" id="logout">
+                            <a class="nav-link" th:href="@{/logout}">Logout</a>
+                        </li>
+                    </ul>
+            </nav>
+        </header>
+    </div>
+
+
+        <div th:fragment="scripts-bootstrap">
+            <script th:src="@{/js/bootstrap.min.js}"></script>
+            <script th:src="@{/js/script.js}"></script>
+        </div>
+        <div th:fragment="scripts-jquery">
+            <script th:src="@{/js/jquery.js}"></script>
+            <script th:src="@{/js/jquery.maskedinput.min.js}"></script>
+            <script th:src="@{/js/inputmask.js}"></script>
+        </div>
+    </body>
+</html>

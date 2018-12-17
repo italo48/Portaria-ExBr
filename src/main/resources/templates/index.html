@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Portaria EB</title>
+</head>
+<head th:insert = "layout/fragmentos :: head"></head>
+
+<body>
+
+    <div th:replace="layout/fragmentos :: header" ></div>
+
+    <div class="container registrador">
+        <form method="POST" th:action="@{/registros/novo_registro}" >
+            <div class="alert alert-success" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+                <span th:text="${mensagem}"> </span>
+            </div>
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <div class="centralizado">
+                        <input type="text" class="perimetro-ativo font-custom-style" name="numSd" placeholder="Numero do soldado" required/>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row centralizado">
+                <div class="col-md-6" >
+                    <button class="btn btn-success grande" name="tipo" th:value="Entrada" >Registrar Entrada</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-danger grande" name="tipo" th:value="Saída" >Registrar Saída</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+<div th:replace="layout/fragmentos :: scripts-bootstrap"></div>
+</body>
+</html>

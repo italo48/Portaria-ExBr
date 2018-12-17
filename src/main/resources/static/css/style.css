@@ -1,0 +1,45 @@
+*{
+    font-family: "Courier New";
+    font-size: 15px;
+}
+
+#logout{
+    display: block;
+    left: 30px;
+}
+
+.formulario{
+    margin-top: 50px;
+    height: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 700px;
+}
+
+.registrador{
+    margin-top: 70px;
+    height: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 900px;
+}
+
+.centralizado{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.perimetro-ativo{
+    margin: 50px auto;
+}
+
+.grande{
+    height: 150%;
+    /*width: 110%;*/
+}
+
+.font-custom-style{
+    font-style: italic;
+    font-size: 25px;
+    font-family: Arial;
+}

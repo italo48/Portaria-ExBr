@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portaria EB - Lista de soldados</title>
+    </head>
+
+    <head th:insert = "layout/fragmentos :: head"></head>
+
+    <body>
+        <div th:replace="layout/fragmentos :: header" ></div>
+        <div class="container perimetro-ativo">
+            <h1>Soldados</h1>
+            <table class="table table-bordered perimetro-ativo">
+                <thead>
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Nome de Guerra</th>
+                    <th scope="col">Numero</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="soldado : ${todosOsSoldados}">
+                    <td th:text="${soldado.id}"></td>
+                    <td th:text="${soldado.nome}"></td>
+                    <td th:text = "${soldado.nomeDeGuerra}"></td>
+                    <td th:text="${{soldado.numero}}"></td>
+                    <td > <a class="btn btn-danger" th:href="@{/soldados/{id}(id = ${soldado.id})}"> Excluir </a> </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+            <div th:replace="layout/fragmentos :: scripts-bootstrap"></div>
+    </body>
+</html>

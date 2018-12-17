@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Portaria EB - Cadastro</title>
+</head>
+<head th:insert = "layout/fragmentos :: head"></head>
+
+<body>
+
+    <div th:replace="layout/fragmentos :: header" ></div>
+
+    <div class="container perimetro-ativo">
+        <h1>Cadastrar novo soldado</h1>
+        <form th:method="POST"  th:action="@{/soldados/salvar}" th:object="${soldado}">
+            <input type="hidden" th:field="*{id}">
+            <div class="form-group">
+                <input type="text" placeholder="Nome" class="form-control"  th:field=*{nome} required />
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Nome de Guerra" class="form-control" th:field=*{nomeDeGuerra} required />
+            </div>
+            <div class="form-group">
+                <input type="number" placeholder="Numero" class="form-control" th:field=*{numero} required />
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Batalhão" class="form-control" th:field=*{batalhao} required />
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Login" class="form-control" th:field=*{login} required />
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Senha" class="form-control" th:field=*{senha} required />
+            </div>
+            <input type="submit" value="cadastrar" class="btn btn-danger" />
+        </form>
+    </div>
+    <div th:replace="layout/fragmentos :: scripts-bootstrap"></div>
+</body>
+</html>
