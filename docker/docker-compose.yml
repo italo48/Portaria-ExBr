@@ -8,7 +8,7 @@ portaria-eb:
 mysql-db:
   build: ./db
   ports:
-    - "3306:3306"
+    - "3307:3306"
   volumes_from:
     - mysql-db-data
 
@@ -16,4 +16,4 @@ mysql-db-data:
   image: cogniteev/echo
   command: echo 'Data Container for MySql'
   volumes:
-    - /home/italo/Documentos/Dependencies/data
+    - /var/lib/mysql/data
