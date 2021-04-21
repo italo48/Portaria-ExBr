@@ -4,13 +4,13 @@
 
 #### Tecnologias usadas
 
-- Spring Boot
-- Thymeleaf
-- Hibernate
-- MySql
-- HTML5 e CSS3
-- Bootstrap
-- Spring Security
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Thymeleaf](https://www.thymeleaf.org/)
+- [Hibernate](https://hibernate.org/)
+- [MySql](https://www.mysql.com/)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML) e [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [Bootstrap](https://getbootstrap.com/)
+- [Spring Security](https://spring.io/projects/spring-security)
 
 #### Descrição
 
