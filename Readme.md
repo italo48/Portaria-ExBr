@@ -1,6 +1,6 @@
 # Portaria EB
 
-
+![TelaPortaria](https://user-images.githubusercontent.com/18484165/115627191-f315f100-a2d4-11eb-8a87-71b57b6a85dc.png)
 
 #### Tecnologias usadas
 
